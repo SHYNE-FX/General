@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valentine</title>
+    <link rel="icon" href="Images/Rock.png" type="image/png">
+
+    <!-- Style CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lexend:wght@100..900&family=Manrope:wght@200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    font-family: 'Red Hat Display';
+}
+
+main {
+    height: 100vh;
+    width: 100%;
+    background: #1d1160;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section.container {
+    height: 50vh;
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f1f1f1;
+    border-radius: 1vh;
+}
+
+h1 {
+    font-size: 4vh;
+    text-align: center;
+}
+
+button.yes {
+    height: 8vh;
+    width: 20vh;
+    background-color: rgb(25, 142, 16);
+    border-radius: 1vh;
+    color: #f1f1f1;
+    font-size: 2vh;
+    cursor: pointer;
+    margin-top: 6vh;
+    margin-left: 2vh;
+}   button.yes > i {
+    color: transparent;
+}
+
+button.yes:hover {
+    height: 2000vh;
+    width: 2000vh;
+    color: transparent;
+    background-color: #d609ff;
+}   button.yes:hover > i {
+    color: #f1f1f1;
+    font-size: 10vh;
+}
+
+
+button.no {
+    height: 8vh;
+    width: 20vh;
+    background-color: rgb(178, 28, 184);
+    border-radius: 1vh;
+    color: #f1f1f1;
+    font-size: 2vh;
+    cursor: pointer;
+    margin-top: 6vh;
+    margin-left: 2vh;
+}   button.no:hover {
+    opacity: 0;
+}
+
+
+    </style>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Comfortaa:wght@300..700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Inter:wght@100..900&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=Lexend:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@100..900&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sora:wght@100..800&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Script JS -->
+    <script src="script.js"></script>
+
+</head>
+<body> 
+
+    <main>
+        
+        <section class="container">
+
+            <h1>SHREENIKA, will you plz be my valentine....</h1>
+
+            <div>
+                <button class="yes" id="yes">Yes I love you <br> so much <i>YAYYYY <br> I <br> LOVEEE <br>YOUUUU</i></button>
+                <button class="no">No I hate you <br> so much</button>
+            </div>
+
+        </section>
+            
+    </main>
+
+    <script>
+    </script>
+
+</body>
+</html>
+
+<!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam ea aspernatur deleniti nobis enim itaque fugiat odit quod unde quam omnis dolorem quisquam assumenda sit nisi, consectetur exercitationem atque, modi mollitia ratione maiores. Tempora amet iure autem illum consectetur, corrupti nostrum nobis ullam ratione repellendus assumenda temporibus id! Assumenda praesentium consequatur nihil consequuntur, ullam numquam distinctio, id cum saepe, ab corrupti earum aliquam debitis! Sint accusantium molestiae doloremque perspiciatis voluptate rem ipsa distinctio, voluptatum labore fugit asperiores incidunt dolorum nesciunt mollitia sit harum officia tempore libero quasi quidem aut dolorem illo debitis? Et vitae corporis animi, eum laboriosam quod ratione. --> 
