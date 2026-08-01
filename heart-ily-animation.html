@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Heart - Half Speed</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            overflow: hidden;
+        }
+        
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <canvas id="heartCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById('heartCanvas');
+        const ctx = canvas.getContext('2d');
+
+        canvas.width = Math.min(window.innerWidth, 800);
+        canvas.height = Math.min(window.innerHeight, 800);
+
+        const centerX = canvas.width / 2;
+        const centerY = canvas.height / 2;
+
+        ctx.fillStyle = "#ffb6c1";
+        ctx.font = "bold 10px Arial";
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+
+        const isMobile = window.innerWidth < 600;
+        let scale = isMobile ? 7 : 11;         
+        const maxScale = isMobile ? 12 : 17;   
+
+        let i = 0;
+        let skipFrame = false; 
+
+        function drawNextStep() {
+            skipFrame = !skipFrame; 
+            
+            if (skipFrame) {
+                requestAnimationFrame(drawNextStep);
+                return;
+            }
+
+            let angle = i * (Math.PI * 2) / 120;
+            
+            let x = 16 * Math.pow(Math.sin(angle), 3) * scale;
+            let y = (13 * Math.cos(angle) - 5 * Math.cos(2 * angle) - 2 * Math.cos(3 * angle) - Math.cos(4 * angle)) * scale;
+            
+            let drawX = centerX + x;
+            let drawY = centerY - y; 
+            
+            ctx.fillText("I love you", drawX, drawY);
+
+            i++;
+
+            if (i >= 120) {
+                i = 0;
+                scale++;
+            }
+
+            if (scale < maxScale) {
+                requestAnimationFrame(drawNextStep);
+            }
+        }
+
+        drawNextStep();
+    </script>
+</body>
+</html>
